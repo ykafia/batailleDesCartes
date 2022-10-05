@@ -1,40 +1,37 @@
 package batailleDeCartes;
 import java.util.Random;
+import java.util.*;
 
 public class Carte {
-	public static String[] valeurs= {"2","3","4","5","6","7","8","9","10","Valet","Reine","Roi","As"}; //set up card numbers ace to king, so a total of 13 cards
-	public static String[] couleurs= {"Trefle","Pique","Carreau","Coeur"};
+	public static ArrayList<String> valeurs= List.of("2","3","4","5","6","7","8","9","10","Valet","Reine","Roi","As"); //set up card numbers ace to king, so a total of 13 cards
+	public static ArrayList<String> couleurs= List.of("Trefle","Pique","Carreau","Coeur");
 
 	String valeur;
 	String couleur;
 	
-	// constructor to create a card color and value are at random
-	public static int getRandom(int[] array)
-	{
-		int rnd= new Random().nextInt(array.length);
-		return array[rnd];
+	public String getValeur(){
+		return valeur;
+	}
+	public String setValeur(String val){
+		valeur = val;
+	}
+	public String getCouleur(){
+		return couleur;
+	}
+	public String setCoueur(String val){
+		couleur = val;
 	}
 	
+	// constructor to create a card color and value are at random
 	
-	public static String getCarte(){
-		String val=valeur.length;
-		System.out.printf("%s de %s",valeur,couleur);	
-	};
+	public Carte(){
+		var rnd = new Random();
+		valeur = valeurs[rnd.nextInt(valeurs.length)];
+		couleur = couleurs[rnd.nextInt(couleurs.length)];
+	}	
 	
 	//method to compare two cards
 	public int compareCarte(Carte other){
-		valeurs.
-	};
-	
-	//method to access
-	public void accessCarte(){
-		
-	};
-	
-	//method to modify
-	
-	public void modifieCarte(){
-		
 	};
 	
 	
