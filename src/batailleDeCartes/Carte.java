@@ -31,7 +31,15 @@ public class Carte {
 	}	
 	
 	//method to compare two cards
-	public int compareCarte(Carte other){
+	public int compareCarte(Carte other){ 
+		var compare = 0;
+		var idxThis = valeurs.indexOf(valeur);
+		var idxOther = valeurs.indexOf(other.getValeur());
+		if(idxThis > idxOther)
+			return 1;
+		else if(idxThis < idxOther)
+			return -1;
+		else return 0;
 	};
 	
 	
