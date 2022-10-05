@@ -2,15 +2,19 @@ package batailleDeCartes;
 import java.util.*;
 public class Joueurs {
 	
-	Stack<Carte> carteDeck=new Stack<Carte>();
-	int score=0;
-	//create the card he's holding
-	public void holdingCard() {};
+	Stack<Carte> carteDeck;
+	int score;
+	
+	public int getScore(){
+		return score;
+	}
+	
 	
 	//where you write the table for cards
-	public void joueur(){
-		
-	};
+	public Joueurs(){
+		carteDeck = new Stack<Carte>();
+		score = 0;
+	}
 	
 	
 	//method to take a carte
@@ -30,7 +34,6 @@ public class Joueurs {
 	//here you write the score
 	public void score(int valeur){
 		score+=valeur;
-		
 	}
 
 }
