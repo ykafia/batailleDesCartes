@@ -1,7 +1,9 @@
 package batailleDeCartes;
-
+import java.util.*;
 public class Joueurs {
 	
+	Stack<Carte> carteDeck=new Stack<Carte>();
+	int score=0;
 	//create the card he's holding
 	public void holdingCard() {};
 	
@@ -10,22 +12,24 @@ public class Joueurs {
 		
 	};
 	
+	
 	//method to take a carte
 	
-	public void tirer()
+	public Carte tirer()
 	{
+		return carteDeck.pop();
 		
 	}
 	//methode pour add carte
 	
-	public void ajouter()
+	public void ajouter(Carte c)
 	{
-		
+		carteDeck.push(c);
 	}
 	
 	//here you write the score
-	public void score(){
-		
+	public void score(int valeur){
+		score+=valeur;
 		
 	}
 

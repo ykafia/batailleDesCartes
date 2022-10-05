@@ -2,9 +2,12 @@ package batailleDeCartes;
 import java.util.Random;
 
 public class Carte {
-	public static String[] valeur= {"2","3","4","5","6","7","8","9","10","As","Valet","Reine","Roi"}; //set up card numbers ace to king, so a total of 13 cards
-	public static String[] couleur= {"Coeur","Carreau","Pique","Trefle"};
+	public static String[] valeurs= {"2","3","4","5","6","7","8","9","10","Valet","Reine","Roi","As"}; //set up card numbers ace to king, so a total of 13 cards
+	public static String[] couleurs= {"Trefle","Pique","Carreau","Coeur"};
 
+	String valeur;
+	String couleur;
+	
 	// constructor to create a card color and value are at random
 	public static int getRandom(int[] array)
 	{
@@ -19,8 +22,8 @@ public class Carte {
 	};
 	
 	//method to compare two cards
-	public void compareCarte(){
-		
+	public int compareCarte(Carte other){
+		valeurs.
 	};
 	
 	//method to access
